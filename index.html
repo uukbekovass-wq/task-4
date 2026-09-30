@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заселение в общежитие</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="welcome-panel" aria-label="Студенческое общежитие">
+            <div class="brand"><span class="brand-mark">М</span> <span>МЕСТО</span></div>
+
+            <div class="welcome-copy">
+                <p class="eyebrow">СТУДЕНЧЕСКОЕ ЖИЛЬЁ · 2026</p>
+                <h1>Новый адрес.<br>Большие планы.</h1>
+                <p>Проверьте, подходит ли вам комната в общежитии.</p>
+            </div>
+
+            <figure class="room-photo">
+                <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=85" alt="Светлая комната в студенческом общежитии">
+                <figcaption>Ваш следующий этап начинается здесь</figcaption>
+            </figure>
+            <span class="panel-index" aria-hidden="true">01 / 03</span>
+        </section>
+
+        <section class="form-panel" aria-labelledby="formTitle">
+            <div class="form-topline"><span>ПРОВЕРКА ЗАСЕЛЕНИЯ</span><span class="online-status">Сервис доступен</span></div>
+
+            <div class="form-heading">
+                <p class="eyebrow">ВСЕГО ТРИ ПОЛЯ</p>
+                <h2 id="formTitle">Давайте проверим</h2>
+                <p>Введите данные студента и комнаты, чтобы узнать, доступно ли заселение.</p>
+            </div>
+
+            <form id="checkForm">
+                <div class="field">
+                    <label for="studentId"><span>01</span> ID студента</label>
+                    <input type="text" id="studentId" placeholder="Например, 3" autocomplete="off" required>
+                </div>
+
+                <div class="field">
+                    <label for="buildingNum"><span>02</span> Номер корпуса</label>
+                    <input type="text" id="buildingNum" placeholder="Например, 2" autocomplete="off" required>
+                </div>
+
+                <div class="field">
+                    <label for="roomNum"><span>03</span> Номер комнаты</label>
+                    <input type="text" id="roomNum" placeholder="Например, 102" autocomplete="off" required>
+                </div>
+
+                <button type="submit"><span>Проверить возможность заселения</span><span class="button-arrow" aria-hidden="true">→</span></button>
+            </form>
+
+            <div id="result" aria-live="polite"></div>
+            <p class="privacy-note">Данные используются только для проверки условий заселения.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
